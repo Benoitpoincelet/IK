@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head >
+
+    <br>
+
+    <tittle ><br> <b><u>
+        <p style = "color : rgb(252, 252, 252)", align = "center">Simulateur des frais kilométriques (applicable sur les km parcourus en 2020)</u></b></p></tittle>
+    <meta charset="UTF-8">
+</head>
+
+
+<p><img src="pngegg.png"></p>
+
+<body style= "background-color : rgb(83, 119, 151)">
+    <h1 align="center">Bienvenue sur mon site</h1>
+    <br><br>
+    
+    
+    <img src="phototableauik.jpg"> 
+
+</body>
+
+<script>
+function add() {
+    var chevaux = parseInt(document.getElementById('chevaux').value)
+    var nbKm = parseInt(document.getElementById('nbKm').value)
+
+    var result
+
+    if(nbKm >= 20001){
+
+        if(chevaux == 1){
+            result = nbKm * 0.318
+        } else if (chevaux == 2){
+            result = nbKm * 0.318
+        } else if (chevaux == 3){
+            result = nbKm * 0.318
+        } else if (chevaux == 4){
+            result = nbKm * 0.352
+        } else if (chevaux == 5){
+            result = nbKm * 0.368
+        } else if (chevaux == 6){
+            result = nbKm * 0.386
+        } else if (chevaux >= 7){
+            result = nbKm * 0.405
+        }
+
+    } else if (nbKm <= 5000) {
+
+        if(chevaux == 1){
+            result = nbKm * 0.456
+        } else if (chevaux == 2){
+            result = nbKm * 0.456
+        } else if (chevaux == 3){
+            result = nbKm * 0.456
+        } else if (chevaux == 4){
+            result = nbKm * 0.523
+        } else if (chevaux == 5){
+            result = nbKm * 0.548
+        } else if (chevaux == 6){
+            result = nbKm * 0.574
+        } else if (chevaux >= 7){
+            result = nbKm * 0.601
+        }
+
+    } else {
+
+        if(chevaux == 1){
+            result = nbKm * 0.273 + 915
+        } else if (chevaux == 2){
+            result = nbKm * 0.273 + 915
+        } else if (chevaux == 3){
+            result = nbKm * 0.273 + 915
+        } else if (chevaux == 4){
+            result = nbKm * 0.294 + 1147
+        } else if (chevaux == 5){
+            result = nbKm * 0.308 + 1200
+        } else if (chevaux == 6){
+            result = nbKm * 0.323 + 1256
+        } else if (chevaux >= 7){
+            result = nbKm * 0.34 + 1301
+        }
+
+    }
+
+    document.getElementById('resultat').innerHTML = result
+
+}
+</script>
+
+<br><br><br>
+ <input type='number' id='chevaux' placeholder='nombre de chevaux'></input>
+ <input type='number' id='nbKm' placeholder='nombre de Km parcourus'></input>
+ 
+
+<button onclick="add()">Clic ici pour avoir le montant de l'indemnité kilométrique</button>
+<br>
+<p>Le montant de votre indemnité kilométrique est de : <b id='resultat'></b> Euros</p>
+
+
+
+
+
+
+<br>
+<img alt="" src="voiture-citroen-82.gif" />
+
+</P>
+
+</html>
